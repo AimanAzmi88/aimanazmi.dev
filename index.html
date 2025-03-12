@@ -1,70 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="logo.png">
-    <title>The Home of Aiman Azmi</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Power Renjes Pink</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&display=swap');
+
+        /* Gaya asas */
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            background: linear-gradient(to top, rgba(28, 59, 112, 0.9), rgba(41, 128, 185, 0.9)), url('masjid.jpg') no-repeat center bottom;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Bintang-bintang kelip-kelip */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Bulan */
+        .moon {
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            width: 80px;
+            height: 80px;
+            background: #f9d71c;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            z-index: 2;
+        }
+
+        /* Lampu kelip-kelip */
+        .lampu {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 2;
+        }
+
+        .lamp {
+            width: 12px;
+            height: 20px;
+            background: yellow;
+            border-radius: 50%;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        /* Kotak utama */
+        .container {
+            background: rgba(43, 2, 2, 0.5);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            max-width: 500px;
+            backdrop-filter: blur(4px);
+            position: relative;
+            z-index: 3;
+        }
+
+        h1 {
+            font-family: 'Scheherazade New', serif;
+            font-size: 34px;
+            color: #FFD700;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        .steps {
+            text-align: left;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .steps p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #fffce9;
+        }
+
+        .whatsapp-button {
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+    </style>
 </head>
 <body>
+
+    <!-- Bintang kelip-kelip -->
+    <div class="stars"></div>
+
+    <!-- Bulan -->
+    <div class="moon"></div>
+
+    <!-- Lampu-lampu kelip -->
+    <div class="lampu">
+        <div class="lamp"></div>
+        <div class="lamp" style="animation-delay: 0.2s;"></div>
+        <div class="lamp" style="animation-delay: 0.4s;"></div>
+        <div class="lamp" style="animation-delay: 0.6s;"></div>
+        <div class="lamp" style="animation-delay: 0.8s;"></div>
+        <div class="lamp" style="animation-delay: 1s;"></div>
+    </div>
+
     <div class="container">
-        <h1>🚧 aimanazmi.xyz under construction 🚧</h1>
-        <p>We're working hard to bring you an amazing experience. Please check back soon!</p>
-
-        <!-- Countdown Timer -->
-        <div class="countdown">
-            <div class="time">
-                <span id="days">00</span>
-                <span>Days</span>
-            </div>
-            <div class="time">
-                <span id="hours">00</span>
-                <span>Hours</span>
-            </div>
-            <div class="time">
-                <span id="minutes">00</span>
-                <span>Minutes</span>
-            </div>
-            <div class="time">
-                <span id="seconds">00</span>
-                <span>Seconds</span>
-            </div>
+        <h1>Bot Sahur Untuk Orang Single 🌙</h1>
+        <p>💔 Masih single dan harapkan pasangan kejut sahur? Jangan mimpi! 🤣</p>
+        <p>💤 Ada partner pon tapi macam tak ada?</p>
+        <p>🤭 Tenang... bot ni ada!</p>
+        <p>Bot ni khas untuk orang yang tak laku, tiada siapa nak kejut, tapi masih nak sahur dengan konsisten. 🤭</p>
+        <p>Jangan sedih, bot ni akan kejut sebab kami tahu awak lonely. 😂</p>
+        
+        <!-- Cara Guna -->
+        <div class="steps">
+            <p><b>📌 Cara guna Bot Sahur:</b></p>
+            <p>1️⃣ Chat bot dengan perkataan <b>"Hye atau Hello"</b> 👋</p>
+            <p>2️⃣ Bot akan tanya pukul berapa </p>
+            <p>3️⃣ Set waktu sahur, bot akan kejut setiap 3 minit 🔔</p>
+            <p>4️⃣ Kalau tak reply, bot assume awak pasrah dengan hidup 😴</p>
+            <p>5️⃣ Pukul 8 pagi, bot bagi quote inspirasi ✨ supaya awak tak give up jadi single 🤣</p>
         </div>
 
-        <!-- Progress Bar -->
-        <div class="progress-bar">
-            <div class="progress"></div>
-        </div>
+        <a href="https://wa.me/601139679869" class="whatsapp-button">Chat dengan Bot 📲</a>
+    </div>
 
-    <!-- JavaScript for Countdown Timer -->
     <script>
-        const countdownDate = new Date("2025-03-01T23:59:59").getTime();
-
-        const updateCountdown = () => {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = String(days).padStart(2, "0");
-            document.getElementById("hours").innerText = String(hours).padStart(2, "0");
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
-
-            if (distance < 0) {
-                clearInterval(interval);
-                document.querySelector(".countdown").innerHTML = "<h2>We're Live!</h2>";
-            }
-        };
-
-        const interval = setInterval(updateCountdown, 1000);
-        updateCountdown();
+        // Generate bintang kelip-kelip
+        const starContainer = document.querySelector('.stars');
+        for (let i = 0; i < 50; i++) {
+            let star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.animationDuration = Math.random() * 2 + 1 + 's';
+            starContainer.appendChild(star);
+        }
     </script>
+
 </body>
 </html>
